@@ -1,6 +1,7 @@
 import { useMemo } from 'react';
 
-export default function Columns(){
+export default function Columns(props) {
+    let languageNames = props.map(country => country.languages.map(language => language.name))   
     const columns = useMemo(
         () => [
             {
@@ -12,20 +13,17 @@ export default function Columns(){
                 accessor: "capital"
             },
             {
-                Header: "População",
-                accessor: "population"
-            },
-            {
-                Header: "Área",
-                accessor: "area"
-            },
-            {
                 Header: "Bandeira",
-                accessor: "flag.svgFile"
+                accessor: "emoji"
             },
             {
-                Header: "Sub Região",
-                accessor: "subregion.name"
+                Header: "Idiomas",
+                id: 'language',
+                accessor: () => languageNames
+            },
+            {
+                Header: "Moeda",
+                accessor: "currency"
             },
         ],
         []

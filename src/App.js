@@ -9,7 +9,7 @@ function App() {
   if(error) return <p>Something wrong to fetching data.</p>
   return (
     <div className="App">
-      <Country country = { data.Country } />
+      <Country countries = { data.countries } />
     </div>
   );
 }

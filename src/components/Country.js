@@ -6,8 +6,8 @@ import { FaCaretSquareUp, FaCaretSquareDown } from "react-icons/fa";
 import "./Country.css";
 
 function Country(props) {
-    const data = Data(props.country);
-    const columns = Columns(props.country);
+    const data = Data(props.countries);
+    const columns = Columns(props.countries);
 
     const {
         getTableProps,
@@ -55,8 +55,8 @@ function Country(props) {
                                 {row.cells.map(cell => {
                                     return (
                                         <td {...cell.getCellProps()}>
-                                            { cell.column.id === "flag.svgFile" ? <img src={cell.value} alt="Bandeira do país"></img>
-                                                : cell.render("Cell")}
+                                            {cell.column.id === "language" ? <span>{cell.row.original.languages.map(element => element.name).toString()}</span> :
+                                             cell.render("Cell")}
                                         </td>
                                     );
                                 })}
