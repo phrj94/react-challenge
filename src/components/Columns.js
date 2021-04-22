@@ -1,7 +1,6 @@
 import { useMemo } from 'react';
 
-export default function Columns(props) {
-    let languageNames = props.map(country => country.languages.map(language => language.name))   
+export default function Columns() {
     const columns = useMemo(
         () => [
             {
@@ -18,8 +17,8 @@ export default function Columns(props) {
             },
             {
                 Header: "Idiomas",
-                id: 'language',
-                accessor: () => languageNames
+                accessor: 'language',
+                //accessor: () => languageNames --> If you want sortBy this column, enable this line;
             },
             {
                 Header: "Moeda",

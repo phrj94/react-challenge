@@ -3,6 +3,7 @@ const getCountries = () => gql`
         query {
             countries {
                 name,
+                code,
                 emoji,
                 capital,
                 currency,
