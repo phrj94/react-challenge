@@ -19,8 +19,8 @@ export default function Columns() {
             },
             {
                 Header: "Idiomas",
-                accessor: 'language',
-                //accessor: () => languageNames --> If you want sortBy this column, enable this line;
+                accessor:'languages[0].name',
+                Cell: ({ cell: { row } }) => <span>{row.original.languages.map(el => el.name).toString()}</span>
             },
             {
                 Header: "Moeda",
