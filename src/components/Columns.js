@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import ReactCountryFlag from "react-country-flag";
 
 export default function Columns() {
     const columns = useMemo(
@@ -13,7 +14,8 @@ export default function Columns() {
             },
             {
                 Header: "Bandeira",
-                accessor: "emoji"
+                accessor: "code",
+                Cell: ({ cell: { value } }) => <ReactCountryFlag countryCode={value} svg title={value} />
             },
             {
                 Header: "Idiomas",

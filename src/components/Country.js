@@ -3,7 +3,6 @@ import Data from './Data.js';
 import Columns from './Columns.js';
 import { useSortBy, useTable } from 'react-table';
 import { FaCaretSquareUp, FaCaretSquareDown } from "react-icons/fa";
-import ReactCountryFlag from "react-country-flag"
 import "./Country.css";
 
 function Country(props) {
@@ -56,19 +55,7 @@ function Country(props) {
                                 {row.cells.map(cell => {
                                     return (
                                         <td {...cell.getCellProps()}>
-                                            {
-                                                cell.column.id === "language" ? <span>{cell.row.original.languages.map(element => element.name).toString()}</span> 
-                                                : cell.column.id === "emoji" ? 
-                                                <ReactCountryFlag 
-                                                    countryCode={cell.row.original.code}
-                                                    svg
-                                                    cdnUrl="https://cdnjs.cloudflare.com/ajax/libs/flag-icon-css/3.4.3/flags/1x1/"
-                                                    cdnSuffix="svg"
-                                                    title={cell.row.original.code}
-                                                    className="flag"
-                                                />
-                                                : cell.render("Cell")
-                                            }
+                                            { cell.render("Cell") }
                                         </td>
                                     );
                                 })}

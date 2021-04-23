@@ -8,7 +8,7 @@ const getCountries = () => gql`
                 capital,
                 currency,
                 languages {
-                  name
+                  language:name
                 }
           }
       }
