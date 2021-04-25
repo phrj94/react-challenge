@@ -10,11 +10,6 @@ th {
     color: white;
 }
 
-img {
-    width: 30px;
-    height: 20px;
-}
-
 th {
     margin: 0;
     padding: 0.5rem;
@@ -56,9 +51,21 @@ tr > th > div > span {
     justify-content: center;
 }
 
+.flag {
+    margin: 0 auto;
+}
+
 .titleHeader {
     width: 80%;
     float: left;
+}
+
+.t-head {
+    height: 22px;
+}
+
+.sort {
+    width: 20%;
 }
 
 

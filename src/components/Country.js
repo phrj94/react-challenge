@@ -6,8 +6,8 @@ import { FaCaretSquareUp, FaCaretSquareDown } from "react-icons/fa";
 import "./Country.css";
 
 function Country(props) {
-    const data = Data(props.country);
-    const columns = Columns(props.country);
+    const data = Data(props.countries);
+    const columns = Columns();
 
     const {
         getTableProps,
@@ -23,23 +23,14 @@ function Country(props) {
                 <thead >
                     {headerGroups.map(headerGroup => (
                         <tr {...headerGroup.getHeaderGroupProps()} >
-
                             {headerGroup.headers.map(column => (
-                                <th className="thead" {...column.getHeaderProps(column.getSortByToggleProps())}>
-                                    <div >
+                                <th className="t-head" {...column.getHeaderProps(column.getSortByToggleProps())}>
+                                    <div>
                                         <span className="titleHeader">
-                                          {column.render("Header")}  
-                                        </span>                                        
-                                        <span>
-                                            {column.isSorted ? (
-                                                column.isSortedDesc ? (
-                                                    <FaCaretSquareDown />
-                                                ) : (
-                                                    <FaCaretSquareUp />
-                                                )
-                                            ) : (
-                                                ""
-                                            )}
+                                            {column.render("Header")}
+                                        </span>
+                                        <span className="sort">
+                                            {column.isSorted ? (column.isSortedDesc ? (<FaCaretSquareDown /> ) : ( <FaCaretSquareUp /> ) ) : ("")}
                                         </span>
                                     </div>
                                 </th>
@@ -55,8 +46,7 @@ function Country(props) {
                                 {row.cells.map(cell => {
                                     return (
                                         <td {...cell.getCellProps()}>
-                                            { cell.column.id === "flag.svgFile" ? <img src={cell.value} alt="Bandeira do país"></img>
-                                                : cell.render("Cell")}
+                                            { cell.render("Cell")}
                                         </td>
                                     );
                                 })}
