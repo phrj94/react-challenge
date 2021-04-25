@@ -23,14 +23,13 @@ function Country(props) {
                 <thead >
                     {headerGroups.map(headerGroup => (
                         <tr {...headerGroup.getHeaderGroupProps()} >
-
                             {headerGroup.headers.map(column => (
-                                <th className="thead" {...column.getHeaderProps(column.getSortByToggleProps())}>
-                                    <div >
+                                <th className="t-head" {...column.getHeaderProps(column.getSortByToggleProps())}>
+                                    <div>
                                         <span className="titleHeader">
                                             {column.render("Header")}
                                         </span>
-                                        <span>
+                                        <span className="sort">
                                             {column.isSorted ? (column.isSortedDesc ? (<FaCaretSquareDown /> ) : ( <FaCaretSquareUp /> ) ) : ("")}
                                         </span>
                                     </div>
