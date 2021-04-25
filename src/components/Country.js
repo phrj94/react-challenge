@@ -28,18 +28,10 @@ function Country(props) {
                                 <th className="thead" {...column.getHeaderProps(column.getSortByToggleProps())}>
                                     <div >
                                         <span className="titleHeader">
-                                          {column.render("Header")}  
-                                        </span>                                        
+                                            {column.render("Header")}
+                                        </span>
                                         <span>
-                                            {column.isSorted ? (
-                                                column.isSortedDesc ? (
-                                                    <FaCaretSquareDown />
-                                                ) : (
-                                                    <FaCaretSquareUp />
-                                                )
-                                            ) : (
-                                                ""
-                                            )}
+                                            {column.isSorted ? (column.isSortedDesc ? (<FaCaretSquareDown /> ) : ( <FaCaretSquareUp /> ) ) : ("")}
                                         </span>
                                     </div>
                                 </th>
@@ -55,7 +47,7 @@ function Country(props) {
                                 {row.cells.map(cell => {
                                     return (
                                         <td {...cell.getCellProps()}>
-                                            { cell.render("Cell") }
+                                            { cell.render("Cell")}
                                         </td>
                                     );
                                 })}
