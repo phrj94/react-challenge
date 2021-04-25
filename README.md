@@ -1,14 +1,15 @@
 # Desafio React - Informações de países
 
 ## Descrição do desafio
-<p align="center">Desenvolver uma aplicação em React de uma lista de países, consultando a API Countries,
+<ul>Desenvolver uma aplicação em React de uma lista de países, consultando a API Countries,
 feita em GraphQL e trazer os seguintes dados:
-Nome do país,
-Capital,
-Bandeira(emoji),
-idioma(s),
-moeda</p>
-<p>Ao clicar no topo de cada coluna é feita a ordenação.</p>
+  <li>Nome do país</li>
+  <li>Capital</li>
+  <li>Bandeira(emoji)</li>
+  <li>Idioma(s)</li>
+  <li>Moeda</li>
+</ul>
+<p><strong>Ao clicar no topo de cada coluna é feita a ordenação.</strong></p>
 
 ### Tecnologias
 
