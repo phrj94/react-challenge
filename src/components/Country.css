@@ -1,14 +1,14 @@
-/*Deixar a tabela responsiva*/
-table {
+/*
+    *Este arquivo é legado, não uso mais.
+    *Estou deixando ele comentado apenas por preguiça de tirá-lo agora. Mais adiante eu retiro ele daqui. :)
+*/
+/* table {
     border-spacing: 0;
     border-collapse: collapse;
     border: 1px solid black;
     position: relative;
 }
-th {
-    background-color: black;
-    color: white;
-}
+
 
 th {
     margin: 0;
@@ -43,7 +43,7 @@ td:last-child {
 tr > th > div > span {
     position: relative;
     float: right;
-}
+} 
 
 .container {
     padding-top: 25px;
@@ -51,18 +51,13 @@ tr > th > div > span {
     justify-content: center;
 }
 
-.flag {
-    margin: 0 auto;
-}
+
 
 .titleHeader {
     width: 80%;
     float: left;
 }
 
-.t-head {
-    height: 22px;
-}
 
 .sort {
     width: 20%;
@@ -70,7 +65,7 @@ tr > th > div > span {
 
 
 @media only screen and (max-width: 768px) {
-    /* For mobile: */
+    // For mobile:
     .container {
         padding-top: 0;
         display: flex;
@@ -79,3 +74,4 @@ tr > th > div > span {
     }
 
 }
+*/
